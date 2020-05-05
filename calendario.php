@@ -22,7 +22,7 @@
                  
                    <?php $calendario = array();
                          while($eventos = $resultado->fetch_assoc() ) { 
-                                $fecha = $eventos['fecha_evento']; 
+                                $fecha = $eventos['fecha_evento'];
                                 $categoria = $eventos['cat_evento'];
                                 switch ($categoria) {
                                        case 'Talleres':
@@ -57,7 +57,7 @@
                               <?php foreach($lista_eventos as $evento): ?>
                                   <div class="dia">
                                       <p class="titulo"><?php echo $evento['titulo']; ?></p>
-                                      <p class="hora"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $evento['fecha'] . " " . $eventos['hora'] . " hrs"; ?>
+                                      <p class="hora"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $evento['fecha'] . " " . $evento['hora'] . " hrs"; ?>
                                       <p><?php echo $evento['categoria']; ?></p>
                                       <p><i class="fa fa-user" aria-hidden="true"></i>  <?php echo $evento['invitado']; ?> </p>
                                  </div>
